@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "series-consistency-checker"
+version = "0.1.0"
+description = "Local-first Python CLI that checks manuscript files for inconsistent character names, places, and timeline details."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Asdale Dynamics, LLC"}]
+keywords = ["manuscript", "consistency", "cli", "writing", "editing"]
+
+[project.scripts]
+series-checker = "series_checker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
